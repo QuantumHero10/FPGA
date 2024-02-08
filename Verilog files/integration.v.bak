@@ -1,0 +1,19 @@
+module integration(
+    input wire clk,
+    input wire rst,
+    input wire signed [15:0] in,
+    output reg signed [31:0] out
+);
+
+reg signed [15:0] prev_in;
+always @(posedge clk) begin
+    if (rst) begin
+        out <= 0;
+        prev_in <= 0;
+    end else begin
+        out <= out + (in + prev_in);
+        prev_in <= in;
+    end
+end
+
+endmodule

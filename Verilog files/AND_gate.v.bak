@@ -1,0 +1,13 @@
+`timescale 1ns/1ns
+
+module AND_gate (
+    input a, // First input
+    input b, // Second input
+    output y, // Output
+	 output z
+);
+
+assign y = a & b;
+assign #1000000 z = a & b; // AND operation
+
+endmodule

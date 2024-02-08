@@ -1,0 +1,20 @@
+module adc (
+    input wire clk,
+    input wire reset,
+    input wire [7:0] analog_in,
+    output reg digital_out
+);
+
+always @(posedge clk) begin
+    if (reset) begin
+        digital_out <= 0;
+    end else begin
+        if (analog_in > 127) begin
+            digital_out <= 1;
+        end else begin
+            digital_out <= 0;
+        end
+    end
+end
+
+endmodule

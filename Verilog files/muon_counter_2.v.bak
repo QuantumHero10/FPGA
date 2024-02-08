@@ -1,0 +1,403 @@
+`timescale 1ns/1ns
+
+module muon_counter_2(
+    input wire clk,          // Clock input
+    input wire reset,        // Reset input
+    input wire signal_in,    // Continuous digital signal input
+    input [5:0] sw,
+    output wire [7:0] ld,
+    output wire [17:0] count, // Output count of high logic signals (up to 32 bits)
+    output wire [7:0] count0,
+    output wire [7:0] count1,
+    output wire [7:0] count2,
+    output wire [7:0] count3,
+    output wire [7:0] count4,
+    output wire [7:0] count5,
+    output wire [7:0] count6,
+    output wire [7:0] count7,
+    output wire [7:0] count8,
+    output wire [7:0] count9,
+    output wire [7:0] count10,
+    output wire [7:0] count11,
+    output wire [7:0] count12,
+    output wire [7:0] count13,
+    output wire [7:0] count14,
+    output wire [7:0] count15,
+    output wire [7:0] count16,
+    output wire [7:0] count17,
+    output wire [7:0] count18,
+    output wire [7:0] count19,
+    output wire [7:0] count20,
+    output wire [7:0] count21,
+    output wire [7:0] count22,
+    output wire [7:0] count23,
+    output wire [7:0] count24,
+    output wire [7:0] count25,
+    output wire [7:0] count26,
+    output wire [7:0] count27,
+    output wire [7:0] count28,
+    output wire [7:0] count29,
+    output wire [7:0] count30,
+    output wire [7:0] count31,
+    output wire [7:0] count32,
+    output wire [7:0] count33,
+    output wire [7:0] count34,
+    output wire [7:0] count35,
+    output wire [7:0] count36,
+    output wire [7:0] count37,
+    output wire [7:0] count38,
+    output wire [7:0] count39,
+    output wire [7:0] count40,
+    output wire [7:0] count41,
+    output wire [7:0] count42,
+    output wire [7:0] count43,
+    output wire [7:0] count44,
+    output wire [7:0] count45,
+    output wire [7:0] count46,
+    output wire [7:0] count47,
+    output wire [7:0] count48,
+    output wire [7:0] count49
+);
+
+reg [7:0] led;
+reg [17:0] counter; // 32-bit counter to store the count
+reg [7:0] counter0;
+reg [7:0] counter1;
+reg [7:0] counter2;
+reg [7:0] counter3;
+reg [7:0] counter4;
+reg [7:0] counter5;
+reg [7:0] counter6;
+reg [7:0] counter7;
+reg [7:0] counter8;
+reg [7:0] counter9;
+reg [7:0] counter10;
+reg [7:0] counter11;
+reg [7:0] counter12;
+reg [7:0] counter13;
+reg [7:0] counter14;
+reg [7:0] counter15;
+reg [7:0] counter16;
+reg [7:0] counter17;
+reg [7:0] counter18;
+reg [7:0] counter19;
+reg [7:0] counter20;
+reg [7:0] counter21;
+reg [7:0] counter22;
+reg [7:0] counter23;
+reg [7:0] counter24;
+reg [7:0] counter25;
+reg [7:0] counter26;
+reg [7:0] counter27;
+reg [7:0] counter28;
+reg [7:0] counter29;
+reg [7:0] counter30;
+reg [7:0] counter31;
+reg [7:0] counter32;
+reg [7:0] counter33;
+reg [7:0] counter34;
+reg [7:0] counter35;
+reg [7:0] counter36;
+reg [7:0] counter37;
+reg [7:0] counter38;
+reg [7:0] counter39;
+reg [7:0] counter40;
+reg [7:0] counter41;
+reg [7:0] counter42;
+reg [7:0] counter43;
+reg [7:0] counter44;
+reg [7:0] counter45;
+reg [7:0] counter46;
+reg [7:0] counter47;
+reg [7:0] counter48;
+reg [7:0] counter49;
+integer a=0,b=0,c=0;
+
+always @(posedge clk or negedge reset) begin
+    if (!reset) begin
+	if (b==0)begin
+        counter <= 0; // Reset the counter when the reset signal is asserted
+		  counter0 <= 0;
+        counter1 <= 0;
+        counter2 <= 0;
+        counter3 <= 0;
+        counter4 <= 0;
+        counter5 <= 0;
+        counter6 <= 0;
+        counter7 <= 0;
+        counter8 <= 0;
+        counter9 <= 0;
+        counter10 <= 0;
+        counter11 <= 0;
+        counter12 <= 0;
+        counter13 <= 0;
+        counter14 <= 0;
+        counter15 <= 0;
+        counter16 <= 0;
+        counter17 <= 0;
+        counter18 <= 0;
+        counter19 <= 0;
+        counter20 <= 0;
+        counter21 <= 0;
+        counter22 <= 0;
+        counter23 <= 0;
+        counter24 <= 0;
+        counter25 <= 0;
+        counter26 <= 0;
+        counter27 <= 0;
+        counter28 <= 0;
+        counter29 <= 0;
+        counter30 <= 0;
+        counter31 <= 0;
+        counter32 <= 0;
+        counter33 <= 0;
+        counter34 <= 0;
+        counter35 <= 0;
+        counter36 <= 0;
+        counter37 <= 0;
+        counter38 <= 0;
+        counter39 <= 0;
+        counter40 <= 0;
+        counter41 <= 0;
+        counter42 <= 0;
+        counter43 <= 0;
+        counter44 <= 0;
+        counter45 <= 0;
+        counter46 <= 0;
+        counter47 <= 0;
+        counter48 <= 0;
+        counter49 <= 0;
+	b=1;
+	end
+    end else begin
+		
+if ( (sw[0]==0) & (sw[1]==0) & (sw[2]==0) & (sw[3]==0) & (sw[4]==0) & (sw[5]==0) ) begin
+ led <= 0 ; end
+else if ( (sw[0]==1) & (sw[1]==0) & (sw[2]==0) & (sw[3]==0) & (sw[4]==0) & (sw[5]==0) ) begin
+ led <= counter1 ; end
+else if ( (sw[0]==0) & (sw[1]==1) & (sw[2]==0) & (sw[3]==0) & (sw[4]==0) & (sw[5]==0) ) begin
+ led <= counter2 ; end
+else if ( (sw[0]==1) & (sw[1]==1) & (sw[2]==0) & (sw[3]==0) & (sw[4]==0) & (sw[5]==0) ) begin
+ led <= counter3 ; end
+else if ( (sw[0]==0) & (sw[1]==0) & (sw[2]==1) & (sw[3]==0) & (sw[4]==0) & (sw[5]==0) ) begin
+ led <= counter4 ; end
+else if ( (sw[0]==1) & (sw[1]==0) & (sw[2]==1) & (sw[3]==0) & (sw[4]==0) & (sw[5]==0) ) begin
+ led <= counter5 ; end
+else if ( (sw[0]==0) & (sw[1]==1) & (sw[2]==1) & (sw[3]==0) & (sw[4]==0) & (sw[5]==0) ) begin
+ led <= counter6 ; end
+else if ( (sw[0]==1) & (sw[1]==1) & (sw[2]==1) & (sw[3]==0) & (sw[4]==0) & (sw[5]==0) ) begin
+ led <= counter7 ; end
+else if ( (sw[0]==0) & (sw[1]==0) & (sw[2]==0) & (sw[3]==1) & (sw[4]==0) & (sw[5]==0) ) begin
+ led <= counter8 ; end
+else if ( (sw[0]==1) & (sw[1]==0) & (sw[2]==0) & (sw[3]==1) & (sw[4]==0) & (sw[5]==0) ) begin
+ led <= counter9 ; end
+else if ( (sw[0]==0) & (sw[1]==1) & (sw[2]==0) & (sw[3]==1) & (sw[4]==0) & (sw[5]==0) ) begin
+ led <= counter10 ; end
+else if ( (sw[0]==1) & (sw[1]==1) & (sw[2]==0) & (sw[3]==1) & (sw[4]==0) & (sw[5]==0) ) begin
+ led <= counter11 ; end
+else if ( (sw[0]==0) & (sw[1]==0) & (sw[2]==1) & (sw[3]==1) & (sw[4]==0) & (sw[5]==0) ) begin
+ led <= counter12 ; end
+else if ( (sw[0]==1) & (sw[1]==0) & (sw[2]==1) & (sw[3]==1) & (sw[4]==0) & (sw[5]==0) ) begin
+ led <= counter13 ; end
+else if ( (sw[0]==0) & (sw[1]==1) & (sw[2]==1) & (sw[3]==1) & (sw[4]==0) & (sw[5]==0) ) begin
+ led <= counter14 ; end
+else if ( (sw[0]==1) & (sw[1]==1) & (sw[2]==1) & (sw[3]==1) & (sw[4]==0) & (sw[5]==0) ) begin
+ led <= counter15 ; end
+else if ( (sw[0]==0) & (sw[1]==0) & (sw[2]==0) & (sw[3]==0) & (sw[4]==1) & (sw[5]==0) ) begin
+ led <= counter16 ; end
+else if ( (sw[0]==1) & (sw[1]==0) & (sw[2]==0) & (sw[3]==0) & (sw[4]==1) & (sw[5]==0) ) begin
+ led <= counter17 ; end
+else if ( (sw[0]==0) & (sw[1]==1) & (sw[2]==0) & (sw[3]==0) & (sw[4]==1) & (sw[5]==0) ) begin
+ led <= counter18 ; end
+else if ( (sw[0]==1) & (sw[1]==1) & (sw[2]==0) & (sw[3]==0) & (sw[4]==1) & (sw[5]==0) ) begin
+ led <= counter19 ; end
+else if ( (sw[0]==0) & (sw[1]==0) & (sw[2]==1) & (sw[3]==0) & (sw[4]==1) & (sw[5]==0) ) begin
+ led <= counter20 ; end
+else if ( (sw[0]==1) & (sw[1]==0) & (sw[2]==1) & (sw[3]==0) & (sw[4]==1) & (sw[5]==0) ) begin
+ led <= counter21 ; end
+else if ( (sw[0]==0) & (sw[1]==1) & (sw[2]==1) & (sw[3]==0) & (sw[4]==1) & (sw[5]==0) ) begin
+ led <= counter22 ; end
+else if ( (sw[0]==1) & (sw[1]==1) & (sw[2]==1) & (sw[3]==0) & (sw[4]==1) & (sw[5]==0) ) begin
+ led <= counter23 ; end
+else if ( (sw[0]==0) & (sw[1]==0) & (sw[2]==0) & (sw[3]==1) & (sw[4]==1) & (sw[5]==0) ) begin
+ led <= counter24 ; end
+else if ( (sw[0]==1) & (sw[1]==0) & (sw[2]==0) & (sw[3]==1) & (sw[4]==1) & (sw[5]==0) ) begin
+ led <= counter25 ; end
+else if ( (sw[0]==0) & (sw[1]==1) & (sw[2]==0) & (sw[3]==1) & (sw[4]==1) & (sw[5]==0) ) begin
+ led <= counter26 ; end
+else if ( (sw[0]==1) & (sw[1]==1) & (sw[2]==0) & (sw[3]==1) & (sw[4]==1) & (sw[5]==0) ) begin
+ led <= counter27 ; end
+else if ( (sw[0]==0) & (sw[1]==0) & (sw[2]==1) & (sw[3]==1) & (sw[4]==1) & (sw[5]==0) ) begin
+ led <= counter28 ; end
+else if ( (sw[0]==1) & (sw[1]==0) & (sw[2]==1) & (sw[3]==1) & (sw[4]==1) & (sw[5]==0) ) begin
+ led <= counter29 ; end
+else if ( (sw[0]==0) & (sw[1]==1) & (sw[2]==1) & (sw[3]==1) & (sw[4]==1) & (sw[5]==0) ) begin
+ led <= counter30 ; end
+else if ( (sw[0]==1) & (sw[1]==1) & (sw[2]==1) & (sw[3]==1) & (sw[4]==1) & (sw[5]==0) ) begin
+ led <= counter31 ; end
+else if ( (sw[0]==0) & (sw[1]==0) & (sw[2]==0) & (sw[3]==0) & (sw[4]==0) & (sw[5]==1) ) begin
+ led <= counter32 ; end
+else if ( (sw[0]==1) & (sw[1]==0) & (sw[2]==0) & (sw[3]==0) & (sw[4]==0) & (sw[5]==1) ) begin
+ led <= counter33 ; end
+else if ( (sw[0]==0) & (sw[1]==1) & (sw[2]==0) & (sw[3]==0) & (sw[4]==0) & (sw[5]==1) ) begin
+ led <= counter34 ; end
+else if ( (sw[0]==1) & (sw[1]==1) & (sw[2]==0) & (sw[3]==0) & (sw[4]==0) & (sw[5]==1) ) begin
+ led <= counter35 ; end
+else if ( (sw[0]==0) & (sw[1]==0) & (sw[2]==1) & (sw[3]==0) & (sw[4]==0) & (sw[5]==1) ) begin
+ led <= counter36 ; end
+else if ( (sw[0]==1) & (sw[1]==0) & (sw[2]==1) & (sw[3]==0) & (sw[4]==0) & (sw[5]==1) ) begin
+ led <= counter37 ; end
+else if ( (sw[0]==0) & (sw[1]==1) & (sw[2]==1) & (sw[3]==0) & (sw[4]==0) & (sw[5]==1) ) begin
+ led <= counter38 ; end
+else if ( (sw[0]==1) & (sw[1]==1) & (sw[2]==1) & (sw[3]==0) & (sw[4]==0) & (sw[5]==1) ) begin
+ led <= counter39 ; end
+else if ( (sw[0]==0) & (sw[1]==0) & (sw[2]==0) & (sw[3]==1) & (sw[4]==0) & (sw[5]==1) ) begin
+ led <= counter40 ; end
+else if ( (sw[0]==1) & (sw[1]==0) & (sw[2]==0) & (sw[3]==1) & (sw[4]==0) & (sw[5]==1) ) begin
+ led <= counter41 ; end
+else if ( (sw[0]==0) & (sw[1]==1) & (sw[2]==0) & (sw[3]==1) & (sw[4]==0) & (sw[5]==1) ) begin
+ led <= counter42 ; end
+else if ( (sw[0]==1) & (sw[1]==1) & (sw[2]==0) & (sw[3]==1) & (sw[4]==0) & (sw[5]==1) ) begin
+ led <= counter43 ; end
+else if ( (sw[0]==0) & (sw[1]==0) & (sw[2]==1) & (sw[3]==1) & (sw[4]==0) & (sw[5]==1) ) begin
+ led <= counter44 ; end
+else if ( (sw[0]==1) & (sw[1]==0) & (sw[2]==1) & (sw[3]==1) & (sw[4]==0) & (sw[5]==1) ) begin
+ led <= counter45 ; end
+else if ( (sw[0]==0) & (sw[1]==1) & (sw[2]==1) & (sw[3]==1) & (sw[4]==0) & (sw[5]==1) ) begin
+ led <= counter46 ; end
+else if ( (sw[0]==1) & (sw[1]==1) & (sw[2]==1) & (sw[3]==1) & (sw[4]==0) & (sw[5]==1) ) begin
+ led <= counter47 ; end
+else if ( (sw[0]==0) & (sw[1]==0) & (sw[2]==0) & (sw[3]==0) & (sw[4]==1) & (sw[5]==1) ) begin
+ led <= counter48 ; end
+else if ( (sw[0]==1) & (sw[1]==0) & (sw[2]==0) & (sw[3]==0) & (sw[4]==1) & (sw[5]==1) ) begin
+ led <= counter49 ; end
+else begin
+ led <= 0; end
+ 
+        if (signal_in) begin
+		  #50
+		  c=0;
+		  for (a=0;a<=499;a=a+1)begin
+		  
+		  if (signal_in & (c==0)) begin
+		  counter <= counter + 1; // Increment counter on high logic signal
+		  
+		  if ((a<=9) & (a>=0)) begin counter0 <= counter0 + 1 ; end
+		  else if ((a<=19) & (a>=10)) begin counter1 <= counter1 + 1 ; end
+		  else if ((a<=29) & (a>=20)) begin counter2 <= counter2 + 1 ; end
+		  else if ((a<=39) & (a>=30)) begin counter3 <= counter3 + 1 ; end
+		  else if ((a<=49) & (a>=40)) begin counter4 <= counter4 + 1 ; end
+		  else if ((a<=59) & (a>=50)) begin counter5 <= counter5 + 1 ; end
+		  else if ((a<=69) & (a>=60)) begin counter6 <= counter6 + 1 ; end
+		  else if ((a<=79) & (a>=70)) begin counter7 <= counter7 + 1 ; end
+		  else if ((a<=89) & (a>=80)) begin counter8 <= counter8 + 1 ; end
+		  else if ((a<=99) & (a>=90)) begin counter9 <= counter9 + 1 ; end
+		  else if ((a<=109) & (a>=100)) begin counter10 <= counter10 + 1 ; end
+		  else if ((a<=119) & (a>=110)) begin counter11 <= counter11 + 1 ; end
+		  else if ((a<=129) & (a>=120)) begin counter12 <= counter12 + 1 ; end
+		  else if ((a<=139) & (a>=130)) begin counter13 <= counter13 + 1 ; end
+		  else if ((a<=149) & (a>=140)) begin counter14 <= counter14 + 1 ; end
+		  else if ((a<=159) & (a>=150)) begin counter15 <= counter15 + 1 ; end
+		  else if ((a<=169) & (a>=160)) begin counter16 <= counter16 + 1 ; end
+		  else if ((a<=179) & (a>=170)) begin counter17 <= counter17 + 1 ; end
+		  else if ((a<=189) & (a>=180)) begin counter18 <= counter18 + 1 ; end
+		  else if ((a<=199) & (a>=190)) begin counter19 <= counter19 + 1 ; end
+		  else if ((a<=209) & (a>=200)) begin counter20 <= counter20 + 1 ; end
+		  else if ((a<=219) & (a>=210)) begin counter21 <= counter21 + 1 ; end
+		  else if ((a<=229) & (a>=220)) begin counter22 <= counter22 + 1 ; end
+		  else if ((a<=239) & (a>=230)) begin counter23 <= counter23 + 1 ; end
+		  else if ((a<=249) & (a>=240)) begin counter24 <= counter24 + 1 ; end
+		  else if ((a<=259) & (a>=250)) begin counter25 <= counter25 + 1 ; end
+		  else if ((a<=269) & (a>=260)) begin counter26 <= counter26 + 1 ; end
+		  else if ((a<=279) & (a>=270)) begin counter27 <= counter27 + 1 ; end
+		  else if ((a<=289) & (a>=280)) begin counter28 <= counter28 + 1 ; end
+		  else if ((a<=299) & (a>=290)) begin counter29 <= counter29 + 1 ; end
+		  else if ((a<=309) & (a>=300)) begin counter30 <= counter30 + 1 ; end
+		  else if ((a<=319) & (a>=310)) begin counter31 <= counter31 + 1 ; end
+		  else if ((a<=329) & (a>=320)) begin counter32 <= counter32 + 1 ; end
+		  else if ((a<=339) & (a>=330)) begin counter33 <= counter33 + 1 ; end
+		  else if ((a<=349) & (a>=340)) begin counter34 <= counter34 + 1 ; end
+		  else if ((a<=359) & (a>=350)) begin counter35 <= counter35 + 1 ; end
+		  else if ((a<=369) & (a>=360)) begin counter36 <= counter36 + 1 ; end
+		  else if ((a<=379) & (a>=370)) begin counter37 <= counter37 + 1 ; end
+		  else if ((a<=389) & (a>=380)) begin counter38 <= counter38 + 1 ; end
+		  else if ((a<=399) & (a>=390)) begin counter39 <= counter39 + 1 ; end
+		  else if ((a<=409) & (a>=400)) begin counter40 <= counter40 + 1 ; end
+		  else if ((a<=419) & (a>=410)) begin counter41 <= counter41 + 1 ; end
+		  else if ((a<=429) & (a>=420)) begin counter42 <= counter42 + 1 ; end
+		  else if ((a<=439) & (a>=430)) begin counter43 <= counter43 + 1 ; end
+		  else if ((a<=449) & (a>=440)) begin counter44 <= counter44 + 1 ; end
+		  else if ((a<=459) & (a>=450)) begin counter45 <= counter45 + 1 ; end
+		  else if ((a<=469) & (a>=460)) begin counter46 <= counter46 + 1 ; end
+		  else if ((a<=479) & (a>=470)) begin counter47 <= counter47 + 1 ; end
+		  else if ((a<=489) & (a>=480)) begin counter48 <= counter48 + 1 ; end
+		  else if ((a<=499) & (a>=490)) begin counter49 <= counter49 + 1 ; end
+		  c=1;
+		  
+		  end
+		  else begin
+		  if (c==0) begin
+		  #20;
+		  end
+		  end
+		  end
+        
+        end
+    end
+end
+
+assign ld = led;
+assign count = counter;
+assign count0 = counter0;
+assign count1 = counter1;
+assign count2 = counter2;
+assign count3 = counter3;
+assign count4 = counter4;
+assign count5 = counter5;
+assign count6 = counter6;
+assign count7 = counter7;
+assign count8 = counter8;
+assign count9 = counter9;
+assign count10 = counter10;
+assign count11 = counter11;
+assign count12 = counter12;
+assign count13 = counter13;
+assign count14 = counter14;
+assign count15 = counter15;
+assign count16 = counter16;
+assign count17 = counter17;
+assign count18 = counter18;
+assign count19 = counter19;
+assign count20 = counter20;
+assign count21 = counter21;
+assign count22 = counter22;
+assign count23 = counter23;
+assign count24 = counter24;
+assign count25 = counter25;
+assign count26 = counter26;
+assign count27 = counter27;
+assign count28 = counter28;
+assign count29 = counter29;
+assign count30 = counter30;
+assign count31 = counter31;
+assign count32 = counter32;
+assign count33 = counter33;
+assign count34 = counter34;
+assign count35 = counter35;
+assign count36 = counter36;
+assign count37 = counter37;
+assign count38 = counter38;
+assign count39 = counter39;
+assign count40 = counter40;
+assign count41 = counter41;
+assign count42 = counter42;
+assign count43 = counter43;
+assign count44 = counter44;
+assign count45 = counter45;
+assign count46 = counter46;
+assign count47 = counter47;
+assign count48 = counter48;
+assign count49 = counter49;
+
+endmodule
+
